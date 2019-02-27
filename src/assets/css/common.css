@@ -1,0 +1,313 @@
+/* .clearfix {
+    display: block;
+}
+
+.clearfix:before {
+    display: table;
+    content: "";
+    line-height: 0;
+} */
+
+.clearfix:after {
+    display: block;
+    clear: both;
+    content: "";
+    visibility: hidden;
+    height: 0;
+}
+
+.clearfix {
+    zoom: 1;
+}
+
+.float-left {
+    float: left;
+}
+
+.float-right {
+    float: right;
+}
+
+.clear-float {
+    clear: both;
+}
+
+
+/*侧边栏展开闭合样式*/
+
+
+/*
+.menu-icon{
+	transition: all .3s;
+}
+.rotate-icon{
+	transform: rotate(-90deg);
+}
+.menu-item span{
+	display: inline-block;
+	overflow: hidden;
+	width: 100px;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	vertical-align: bottom;
+	transition: width .2s ease .2s;
+}
+.menu-item i{
+	transform: translateX(0px);
+	transition: font-size .2s ease, transform .2s ease;
+	vertical-align: middle;
+	font-size: 16px;
+}
+.collapsed-menu span{
+	width: 0px;
+	transition: width .2s ease;
+}
+.collapsed-menu i{
+	transform: translateX(5px);
+	transition: font-size .2s ease .2s, transform .2s ease .2s;
+	vertical-align: middle;
+	font-size: 22px;
+}
+*/
+
+h3.Title {
+    font-family: "微软雅黑";
+    margin-left: 0;
+    text-align: left;
+    /* color: #495060; */
+    color: #333;
+    font-weight: 400;
+    font-size: 16px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    position: relative;
+    padding-left: 1em;
+    font-size: 16px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e4e4e4;
+}
+
+h3 span {
+    padding-bottom: 8px;
+    border-bottom: 1px solid #21488a
+}
+
+h3.Title:before {
+    content: counter(number);
+    position: absolute;
+    left: 0;
+    top: 0%;
+    transform: translate(100%, -5%);
+    width: 3px;
+    height: 80%;
+    /* background: #ed3f14; */
+    background: #00bcd5;
+    color: transparent;
+    border-radius: 0%;
+}
+
+
+/* qhc */
+
+
+/* 迭代所属项目信息 */
+
+.showInfo {
+    font-size: 14px;
+    overflow: hidden;
+    line-height: 30px
+}
+
+.showTitle {
+    float: left;
+    text-align: right;
+}
+
+.showCon {
+    float: left;
+}
+
+
+/* 迭代所属项目信息end */
+
+.curPosition {
+    margin: 10px 0;
+    font-size: 16px;
+    padding-left: 10px;
+}
+
+.curPosition span {
+    margin-left: 6px;
+}
+
+.cursor {
+    cursor: pointer;
+}
+
+.w80 {
+    margin: 0 16px;
+}
+
+.pageContent {
+    background: #f5f7f9;
+    position: relative;
+    border-radius: 4px;
+    /*overflow: hidden;*/
+    border: 1px solid #d7dde4;
+    margin-top: 10px;
+}
+
+.pageCon {
+    background: #fff;
+    overflow: hidden;
+}
+
+.pageConTitle {
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    font-size: 16px;
+}
+
+.ivu-breadcrumb {
+    padding-left: 10px;
+}
+
+
+/* 弹出框添加内容 */
+
+.taskrow {
+    width: 100%;
+    height: 50px;
+    line-height: 30px;
+}
+
+.addTaskTableTitle {
+    float: left;
+    width: 100px;
+    text-align: right;
+    font-weight: bold;
+}
+
+.addTaskTableCon {
+    float: left;
+    padding-left: 6px;
+    width: 200px;
+    border-bottom: 1px solid #ccc;
+}
+
+.ivu-modal {
+    text-align: left;
+}
+
+
+/* orange迭代管理 */
+
+.ivu-transfer-list {
+    width: 45%;
+    height: auto;
+}
+
+.ivu-transfer-list-content {
+    overflow: visible;
+}
+
+.ivu-transfer-list-body {
+    overflow: visible;
+    border: none;
+}
+
+.ivu-transfer-operation {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    width: 5 opx;
+    height: 300px;
+    border-radius: 10px;
+    background-color: #f2f2f2;
+}
+
+.ivu-transfer-operation .ivu-btn {
+    margin: auto 8px;
+}
+
+.transtion-items {
+    position: relative;
+    padding: 10px;
+    background-color: #eee;
+}
+
+.transtion-items-btn {
+    position: absolute;
+    top: -25px;
+    right: 10px;
+    display: block;
+    width: 24px;
+    height: 24px;
+    text-align: center;
+    line-height: 24px;
+}
+
+
+/* .trans-top-search {
+    position: relative;
+}
+.trans-top-search i {
+    position: absolute;
+    right: 5px;
+    top: 0;
+} */
+
+.ivu-transfer {
+    display: flex;
+}
+
+.newTop {
+    margin: 16px
+}
+
+
+/* .SerchBox {
+    padding-bottom: 10px;
+} */
+
+.serchBtnBox {
+    padding-left: 20px;
+}
+
+.searchName {
+    text-align: center;
+    line-height: 34px;
+}
+
+.formValidateMoreBtnBox {
+    text-align: center;
+    height: 16px;
+    background: #e9eaec;
+    position: relative;
+    width: 10%;
+    margin: 0 auto;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.formValidateMoreBtnBox .ivu-icon {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -30%);
+    -ms-transform: translate(-50%, -30%);
+    -webkit-transform: translate(-50%, -30%);
+}
+
+.formValidateMoreBtnBox .ivu-icon:first-of-type {
+    transform: translate(-50%, -60%);
+    -ms-transform: translate(-50%, -60%);
+    -webkit-transform: translate(-50%, -60%);
+}
+
+.formValidateMoreBtnBox .ivu-icon:last-of-type {
+    transform: translate(-50%, -20%);
+    -ms-transform: translate(-50%, -20%);
+    -webkit-transform: translate(-50%, -20%);
+}

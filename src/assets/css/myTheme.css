@@ -1,0 +1,41 @@
+.ivu-layout-sider-children {
+    background: #aae5d1
+}
+
+.ivu-menu-dark.ivu-menu-vertical .ivu-menu-item,
+.ivu-menu-dark.ivu-menu-vertical .ivu-menu-submenu-title {
+    color: #333
+}
+
+.sider-item {
+    background: #72d3b0;
+}
+
+.aside-option {
+    background: #72d3b0;
+}
+
+
+/* .ivu-layout-sider-children .aside-option:hover {
+    background: #01babc;
+    color: #fefefe
+} */
+
+.ivu-menu-dark.ivu-menu-vertical .ivu-menu-item:hover,
+.ivu-menu-dark.ivu-menu-vertical .ivu-menu-submenu-title:hover {
+    background: #01babc !important;
+    color: #fefefe !important
+}
+
+.ivu-menu-item-selected {
+    background: #01babc !important;
+    color: #fefefe !important
+}
+
+.header-under-bar {
+    background-color: #aae5d1 !important
+}
+
+.my_foot {
+    background-color: #aae5d1 !important
+}

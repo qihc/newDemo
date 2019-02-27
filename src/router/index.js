@@ -7,7 +7,7 @@ const router = new Router({
     mode: 'hash', //'history',
     routes: [{
             path: '/',
-            redirect: '/overView/chart1',
+            redirect: '/overView/chart2',
         },
         // {
         //     path: '/home',
@@ -41,19 +41,97 @@ const router = new Router({
 
             },
         },
-        // {
-        //     path: '/overView/chart2',
-        //     name: 'chart1',
-        //     components: {
-        //         Cont: resolve => {
-        //             require(["../pages/overView/myChart/chart2"], resolve)
-        //         },
-        //         Aside: resolve => {
-        //             require(["../layout/sider/sider_2"], resolve)
-        //         }
+        {
+            path: '/overView/chart2',
+            name: 'chart1',
+            components: {
+                Cont: resolve => {
+                    require(["../pages/overView/myChart/chart2"], resolve)
+                },
+                Aside: resolve => {
+                    require(["../layout/sider/sider_2"], resolve)
+                }
 
-        //     },
-        // },
+            },
+        },
+        {
+            path: '/overView/chart3',
+            name: 'chart1',
+            components: {
+                Cont: resolve => {
+                    require(["../pages/overView/myChart/chart3"], resolve)
+                },
+                Aside: resolve => {
+                    require(["../layout/sider/sider_2"], resolve)
+                }
+
+            },
+        },
+        {
+            path: '/overView/chart4',
+            name: 'chart1',
+            components: {
+                Cont: resolve => {
+                    require(["../pages/overView/myChart/chart4"], resolve)
+                },
+                Aside: resolve => {
+                    require(["../layout/sider/sider_2"], resolve)
+                }
+
+            },
+        },
+        {
+            path: '/overView/chart5',
+            name: 'chart1',
+            components: {
+                Cont: resolve => {
+                    require(["../pages/overView/myChart/chart5"], resolve)
+                },
+                Aside: resolve => {
+                    require(["../layout/sider/sider_2"], resolve)
+                }
+
+            },
+        },
+        {
+            path: '/overView/chart6',
+            name: 'chart1',
+            components: {
+                Cont: resolve => {
+                    require(["../pages/overView/myChart/chart6"], resolve)
+                },
+                Aside: resolve => {
+                    require(["../layout/sider/sider_2"], resolve)
+                }
+
+            },
+        },
+        {
+            path: '/overView/chart7',
+            name: 'chart1',
+            components: {
+                Cont: resolve => {
+                    require(["../pages/overView/myChart/chart7"], resolve)
+                },
+                Aside: resolve => {
+                    require(["../layout/sider/sider_2"], resolve)
+                }
+
+            },
+        },
+        {
+            path: '/overView/chart8',
+            name: 'chart1',
+            components: {
+                Cont: resolve => {
+                    require(["../pages/overView/myChart/chart8"], resolve)
+                },
+                Aside: resolve => {
+                    require(["../layout/sider/sider_2"], resolve)
+                }
+
+            },
+        },
         //以后删除结束
     ]
 })

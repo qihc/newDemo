@@ -24,6 +24,9 @@ Vue.use(goAgile);
 import selectMenu from './components/selectMenu'
 Vue.use(selectMenu);
 
+import maskTable from './components/maskTable'
+Vue.use(maskTable);
+
 import '@/assets/css/normalize.css'
 import '@/assets/css/reset.css'
 import '@/assets/css/common.css'

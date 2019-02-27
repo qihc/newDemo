@@ -13,15 +13,15 @@ export default {
 		return{
 			isCollapsed: false,
 			pathActive:{
-				agile:["1","1-1"],
-				demand:["1","1-2"],
-				product:["1","1-3"],
-				iteration:["1","1-4"],
-				development:["1","1-5"],
-				defect:["1","1-6"],
-				overView:["1","1-7"],
-				'agile/detail':["1","1-8"],
-
+				'overView/chart1':["1","1-1"],
+				'overView/chart2':["1","1-2"],
+				'overView/chart3':["1","1-3"],
+				'overView/chart4':["1","1-4"],
+				'overView/chart5':["1","1-5"],
+				'overView/chart6':["1","1-6"],
+				'overView/chart7':["1","1-7"],
+				'overView/chart8':["1","1-8"],
+				'overView/chart9':["1","1-9"],
 			},
 			OpenNames:[],//["1"]
 			currentMenu:"",//1-1
@@ -71,26 +71,20 @@ export default {
 
 	},
 
-
-
-
-
 	watch: {
 		'$route'(to,from) {
-			let home = "agile";
-			let page2 = "demand";
-			let page3 = "product";
-			let page4 = "iteration";
-			let page5 = "development";
-			let page6 = "defect";
-			let page7 = "overView";
-			let page8 = "agile/detail";
+			let page1 = "overView/chart1";
+			let page2 = "overView/chart2";
+			let page3 = "overView/chart3";
+			let page4 = "overView/chart4";
+			let page5 = "overView/chart5";
+			let page6 = "overView/chart6";
+			let page7 = "overView/chart7";
+			let page8 = "overView/chart8";
+			let page9 = "overView/chart9";
 
-
-			if(to.path.indexOf(page8)!= -1){
-				this.side_menu(page8)
-			}else  if(to.path.indexOf(home)!= -1){
-				this.side_menu(home)
+			if(to.path.indexOf(page1)!= -1){
+				this.side_menu(page1)
 			}else if(to.path.indexOf(page2)!= -1){
 				this.side_menu(page2)
 			}else if(to.path.indexOf(page3)!= -1){
@@ -103,6 +97,10 @@ export default {
 				this.side_menu(page6)
 			}else if(to.path.indexOf(page7)!= -1){
 				this.side_menu(page7)
+			}else if(to.path.indexOf(page8)!= -1){
+				this.side_menu(page8)
+			}else if(to.path.indexOf(page9)!= -1){
+				this.side_menu(page9)
 			}
 		}
 	},
@@ -113,6 +111,7 @@ export default {
 
 
 .siderBox {
+
   height:100%;
   overflow-y:auto;
   overflow-x:hidden;
@@ -162,7 +161,7 @@ export default {
 	.menu-item span{
 	    display: inline-block;
 	    overflow: hidden;
-	    width: 85px;
+	   
 	    text-overflow: ellipsis;
 	    white-space: nowrap;
 	    vertical-align: bottom;

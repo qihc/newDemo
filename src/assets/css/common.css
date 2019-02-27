@@ -31,6 +31,11 @@
 .clear-float {
     clear: both;
 }
+.siderBox{
+    width: 240px !important;
+    min-width: 240px !important;
+    max-width: 240px !important;
+    flex: 0 0 240px !important;}
 
 
 /*侧边栏展开闭合样式*/

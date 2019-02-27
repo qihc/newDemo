@@ -7,26 +7,32 @@ export default {
     name: "hello",
     data() {
         return {
-            msg: "分块柱状图",
+            msg: "需求事项-部门级",
             bardata: [
                 {
-                    name: "邮件营销",
+                    name: "未提出需求",
                     type: "bar",
                     stack: "广告",
-                    data: [10, 20, 30, 25, 16, 18, 22]
+                    data: [5, 5, 10]
                 },
                 {
-                    name: "联盟广告",
+                    name: "已提出需求",
                     type: "bar",
                     stack: "广告",
-                    data: [10, 20, 30, 25, 16, 18, 22]
+                    data: [21, 11, 20]
                 },
                 {
-                    name: "视频广告",
+                    name: "已立项",
                     type: "bar",
                     stack: "广告",
-                    data: [0, 0, 0, 0, 0, 0, 0]
-                }
+                    data: [20, 20, 10]
+                },
+                {
+                    name: "未提出需求",
+                    type: "bar",
+                    stack: "广告",
+                    data: [5, 5, 10]
+                },
             ]
         };
     },
@@ -67,15 +73,7 @@ export default {
                 xAxis: [
                     {
                         type: "category",
-                        data: [
-                            "周一",
-                            "周二",
-                            "周三",
-                            "周四",
-                            "周五",
-                            "周六",
-                            "周日"
-                        ]
+                        data: ['未提出需求','已提出需求','已立项','已上线']
                     }
                 ],
                 yAxis: [

@@ -52,7 +52,7 @@ export default {
             let option = {
                 legend: {},
                 title: {
-                    text: "任务状态分布图",
+                    text: "需求事项-部门级",
                     x: "center",
                     bottom: 10,
                     textStyle: { fontSize: 14 }
@@ -77,7 +77,7 @@ export default {
                 xAxis: [
                     {
                         type: "category",
-                        data: ['未提出需求','已提出需求','已立项','已上线']
+                        data: ['公司部','个人部','机构部']
                     }
                 ],
                 yAxis: [

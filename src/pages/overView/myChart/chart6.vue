@@ -52,7 +52,7 @@ export default {
             let option = {
                 legend: {},
                 title: {
-                    text: "任务状态分布图",
+                    text: "需求事项-部门群级",
                     x: "center",
                     bottom: 10,
                     textStyle: { fontSize: 14 }

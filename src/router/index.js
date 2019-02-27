@@ -132,6 +132,19 @@ const router = new Router({
 
             },
         },
+        {
+            path: '/overView/chart9',
+            name: 'chart1',
+            components: {
+                Cont: resolve => {
+                    require(["../pages/overView/myChart/chart9"], resolve)
+                },
+                Aside: resolve => {
+                    require(["../layout/sider/sider_2"], resolve)
+                }
+
+            },
+        },
         //以后删除结束
     ]
 })

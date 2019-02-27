@@ -1,32 +1,42 @@
 <template>
-
-  <div id="myChart" :style="{width: '100%', height: '400px'}" ref="myChart"></div>
+  <div>
+      <div id="myChart" :style="{width: '100%', height: '400px'}" ref="myChart"></div>
+       <maskTable v-if="maskTableOnoff"></maskTable>
+  </div>
+  
 </template>
 <script>
 export default {
     name: "hello",
     data() {
         return {
+            maskTableOnoff:false,
             msg: "分块柱状图",
             bardata: [
                 {
-                    name: "邮件营销",
+                    name: "需求计划推进立项情况",
                     type: "bar",
                     stack: "广告",
-                    data: [10, 20, 30, 25, 16, 18, 22]
+                    data: [30, 20, 20]
                 },
                 {
-                    name: "联盟广告",
+                    name: "推进中",
                     type: "bar",
                     stack: "广告",
-                    data: [10, 20, 30, 25, 16, 18, 22]
+                    data: [20, 20, 10]
                 },
                 {
-                    name: "视频广告",
+                    name: "未开始",
                     type: "bar",
                     stack: "广告",
-                    data: [0, 0, 0, 0, 0, 0, 0]
-                }
+                    data: [10, 20, 6]
+                },
+                {
+                    name: "需求计划推进立项情况",
+                    type: "bar",
+                    stack: "广告",
+                    data: [30, 20, 20]
+                },
             ]
         };
     },
@@ -64,30 +74,35 @@ export default {
                     "#ea7e53",
                     "#eedd78"
                 ],
-                xAxis: [
-                    {
-                        type: "category",
-                        data: [
-                            "周一",
-                            "周二",
-                            "周三",
-                            "周四",
-                            "周五",
-                            "周六",
-                            "周日"
-                        ]
-                    }
-                ],
-                yAxis: [
-                    {
-                        type: "value"
-                    }
-                ],
                 series:
-                    this.bardata
+                    {
+                        type: 'pie',
+                        radius : '65%',
+                        center: ['50%', '50%'],
+                        selectedMode: 'single',
+                        data:[
+                            {value:5,name: '已提出需求',},
+                            {value:10, name: '未提出需求'},
+                            {value:5, name: '可研'},
+                            {value:3, name: '立项中'},
+                            {value:7, name: '已立项'},
+                            {value:4, name: '已上线'}
+                        ],
+                        itemStyle: {
+                            emphasis: {
+                                shadowBlur: 10,
+                                shadowOffsetX: 0,
+                                shadowColor: 'rgba(0, 0, 0, 0.5)'
+                            }
+                        }
+                    }
 
-            };
+                };
             myChart.setOption(option);
+            myChart.on('click', ()=>{
+                // alert(1111)
+                this.maskTableOnoff=true;
+            });
         }
     }
 };

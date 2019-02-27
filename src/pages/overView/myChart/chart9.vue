@@ -1,9 +1,9 @@
 <template>
-
   <div>
       <div id="myChart" :style="{width: '100%', height: '400px'}" ref="myChart"></div>
        <maskTable v-if="maskTableOnoff"></maskTable>
   </div>
+  
 </template>
 <script>
 export default {
@@ -14,29 +14,29 @@ export default {
             msg: "分块柱状图",
             bardata: [
                 {
-                    name:'未提出需求',
-                    type:'bar',
-                    stack: '搜索引擎',
-                    data:[5, 5, 10]
+                    name: "需求计划推进立项情况",
+                    type: "bar",
+                    stack: "广告",
+                    data: [30, 20, 20]
                 },
                 {
-                    name:'已提出需求',
-                    type:'bar',
-                    stack: '搜索引擎',
-                    data:[20, 20, 10]
+                    name: "推进中",
+                    type: "bar",
+                    stack: "广告",
+                    data: [20, 20, 10]
                 },
                 {
-                    name:'已立项',
-                    type:'bar',
-                    stack: '搜索引擎',
-                    data:[20, 11, 20]
+                    name: "未开始",
+                    type: "bar",
+                    stack: "广告",
+                    data: [10, 20, 6]
                 },
                 {
-                    name:'已上线',
-                    type:'bar',
-                    stack: '搜索引擎',
-                    data:[30, 30, 15]
-                }
+                    name: "需求计划推进立项情况",
+                    type: "bar",
+                    stack: "广告",
+                    data: [30, 20, 20]
+                },
             ]
         };
     },
@@ -74,21 +74,30 @@ export default {
                     "#ea7e53",
                     "#eedd78"
                 ],
-                xAxis: [
-                    {
-                        type: "category",
-                        data: ['北开事业群','广州事业群','成都事业群']
-                    }
-                ],
-                yAxis: [
-                    {
-                        type: "value"
-                    }
-                ],
                 series:
-                    this.bardata
+                    {
+                        type: 'pie',
+                        radius : '65%',
+                        center: ['50%', '50%'],
+                        selectedMode: 'single',
+                        data:[
+                            {value:2,name: '待处理需求',},
+                            {value:20, name: '未提出需求'},
+                            {value:30, name: '可研'},
+                            {value:5, name: '立项中'},
+                            {value:10, name: '已立项'},
+                            {value:10, name: '已上线'}
+                        ],
+                        itemStyle: {
+                            emphasis: {
+                                shadowBlur: 10,
+                                shadowOffsetX: 0,
+                                shadowColor: 'rgba(0, 0, 0, 0.5)'
+                            }
+                        }
+                    }
 
-            };
+                };
             myChart.setOption(option);
             myChart.on('click', ()=>{
                 // alert(1111)

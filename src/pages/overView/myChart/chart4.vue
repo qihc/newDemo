@@ -1,12 +1,16 @@
 <template>
 
-  <div id="myChart" :style="{width: '100%', height: '400px'}" ref="myChart"></div>
+  <div>
+      <div id="myChart" :style="{width: '100%', height: '400px'}" ref="myChart"></div>
+       <maskTable v-if="maskTableOnoff"></maskTable>
+  </div>
 </template>
 <script>
 export default {
     name: "hello",
     data() {
         return {
+            maskTableOnoff:false,
             msg: "分块柱状图",
             bardata: [
                 {
@@ -80,6 +84,10 @@ export default {
 
             };
             myChart.setOption(option);
+             myChart.on('click', ()=>{
+                // alert(1111)
+                this.maskTableOnoff=true;
+            });
         }
     }
 };

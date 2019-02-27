@@ -24,17 +24,6 @@ Vue.use(goAgile);
 import selectMenu from './components/selectMenu'
 Vue.use(selectMenu);
 
-// import './assets/bootstrap/css/bootstrap.min.css'
-// import './assets/bootstrap/js/bootstrap.min'
-// 
-import Highcharts from 'highcharts';
-import VueHighcharts from 'vue-highcharts';
- 
-Vue.use(VueHighcharts, { Highcharts });
-
-import 'bootstrap/dist/css/bootstrap.min.css'
-
-
 import '@/assets/css/normalize.css'
 import '@/assets/css/reset.css'
 import '@/assets/css/common.css'

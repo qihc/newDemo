@@ -7,7 +7,7 @@ const router = new Router({
     mode: 'hash', //'history',
     routes: [{
             path: '/',
-            redirect: '/overView',
+            redirect: '/overView/chart1',
         },
         // {
         //     path: '/home',
@@ -29,11 +29,11 @@ const router = new Router({
         // },
         
         {
-            path: '/overView',
-            name: 'OverView',
+            path: '/overView/chart1',
+            name: 'chart1',
             components: {
                 Cont: resolve => {
-                    require(["../pages/overView/"], resolve)
+                    require(["../pages/overView/myChart/chart1"], resolve)
                 },
                 Aside: resolve => {
                     require(["../layout/sider/sider_2"], resolve)
@@ -41,6 +41,19 @@ const router = new Router({
 
             },
         },
+        // {
+        //     path: '/overView/chart2',
+        //     name: 'chart1',
+        //     components: {
+        //         Cont: resolve => {
+        //             require(["../pages/overView/myChart/chart2"], resolve)
+        //         },
+        //         Aside: resolve => {
+        //             require(["../layout/sider/sider_2"], resolve)
+        //         }
+
+        //     },
+        // },
         //以后删除结束
     ]
 })

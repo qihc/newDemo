@@ -1,6 +1,7 @@
 <template>
   <div>
       <div id="myChart" :style="{width: '100%', height: '400px'}" ref="myChart"></div>
+      <button @click="handleClick" v-if="maskTableOnoff">X</button>
        <maskTable v-if="maskTableOnoff"></maskTable>
   </div>
   
@@ -41,7 +42,8 @@ export default {
         };
     },
     mounted() {
-        this.drawChart();
+        this.drawChart()
+        
     },
     methods: {
         drawChart() {
@@ -94,6 +96,9 @@ export default {
                 // alert(1111)
                 this.maskTableOnoff=true;
             });
+        },
+        handleClick(){
+            this.maskTableOnoff = false;
         }
     }
 };

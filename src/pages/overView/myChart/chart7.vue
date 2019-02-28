@@ -1,6 +1,7 @@
 <template>
   <div>
       <div id="myChart" :style="{width: '100%', height: '400px'}" ref="myChart"></div>
+      <button @click="handleClick" v-if="maskTableOnoff">X</button>
        <maskTable v-if="maskTableOnoff"></maskTable>
   </div>
   
@@ -44,6 +45,9 @@ export default {
         this.drawChart();
     },
     methods: {
+        handleClick(){
+            this.maskTableOnoff = false;
+        },
         drawChart() {
             // 基于准备好的dom，初始化echarts实例
             // let myChart = this.$echarts.init(document.getElementById('myChart'))

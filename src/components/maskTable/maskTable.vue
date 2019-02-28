@@ -1,10 +1,14 @@
 <template>
-    <Table :columns="columns1" :data="data1"></Table>
+    <div>
+        <!-- <button @click="handleClick" v-show="isShowTable">X</button> -->
+        <Table :columns="columns1" :data="data1" ></Table>
+    </div>
 </template>
 <script>
 export default {
     data() {
         return {
+            // isShowTable:true,
             // 战略分类    
             // 业务分类    
             // 部门名称    
@@ -120,11 +124,14 @@ export default {
             ]
         };
     },
+    
     mounted() {
        
     },
     methods: {
-      
+    //   handleClick:function(){
+    //       this.isShowTable = false;
+    //   },
     }
 };
 </script>

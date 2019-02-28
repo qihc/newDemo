@@ -1,8 +1,8 @@
 <template>
-
   <div>
+      <!-- <selectMenu></selectMenu> -->
       <div id="myChart" :style="{width: '100%', height: '400px'}" ref="myChart"></div>
-       <maskTable v-if="maskTableOnoff"></maskTable>
+       <!-- <maskTable v-if="maskTableOnoff"></maskTable> -->
   </div>
 </template>
 <script>
@@ -10,19 +10,33 @@ export default {
     name: "hello",
     data() {
         return {
-            maskTableOnoff:false,
+            maskTableOnoff:true,
             msg: "需求计划提出情况",
             bardata: [
                 {
                     name: "年初需求事项计划数",
                     type: "bar",
                     stack: "广告",
+                    label: {
+                        normal: {
+                            show: true,
+                            position: 'inside',
+                            fontSize:16
+                        }
+                    },
                     data: [6, 10, 13, 6]
                 },
                 {
                     name: "新增需求事项数",
                     type: "bar",
                     stack: "广告",
+                    label: {
+                        normal: {
+                            show: true,
+                            position: 'inside',
+                            fontSize:16
+                        }
+                    },
                     data: [15, 21, 22, 34]
                 }
             ]
@@ -80,7 +94,8 @@ export default {
             myChart.setOption(option);
              myChart.on('click', ()=>{
                 // alert(1111)
-                this.maskTableOnoff=true;
+                // this.maskTableOnoff=true;
+                this.$emit('childByValue', this.maskTableOnoff)
             });
         }
     }

@@ -1,5 +1,6 @@
 <template>
     <div>
+        <selectMenu></selectMenu>
         <div id="myChart" :style="{width: '100%', height: '400px'}" ref="myChart"></div>
         <maskTable v-if="maskTableOnoff"></maskTable>
     </div>
@@ -16,18 +17,39 @@ export default {
                     name: "员工渠道",
                     type: "bar",
                     stack: "广告",
+                    label: {
+                        normal: {
+                            show: true,
+                            position: 'inside',
+                            fontSize:16
+                        }
+                    },
                     data: [23, 3, 2, 2]
                 },
                 {
                     name: "龙财富",
                     type: "bar",
                     stack: "广告",
+                    label: {
+                        normal: {
+                            show: true,
+                            position: 'inside',
+                            fontSize:16
+                        }
+                    },
                     data: [12, 4, 3, 3]
                 },
                 {
                     name: "客户信息",
                     type: "bar",
                     stack: "广告",
+                    label: {
+                        normal: {
+                            show: true,
+                            position: 'inside',
+                            fontSize:16
+                        }
+                    },
                     data: [19, 2, 4, 4]
                 }
             ]

@@ -1,8 +1,8 @@
 <template>
-
   <div>
+      <selectMenu></selectMenu>
       <div id="myChart" :style="{width: '100%', height: '400px'}" ref="myChart"></div>
-       <maskTable v-if="maskTableOnoff"></maskTable>
+      <maskTable v-if="maskTableOnoff"></maskTable>
   </div>
 </template>
 <script>
@@ -17,24 +17,52 @@ export default {
                     name: "未提出需求",
                     type: "bar",
                     stack: "广告",
+                    label: {
+                        normal: {
+                            show: true,
+                            position: 'inside',
+                            fontSize:16
+                        }
+                    },
                     data: [5, 5, 10]
                 },
                 {
                     name: "已提出需求",
                     type: "bar",
                     stack: "广告",
+                    label: {
+                        normal: {
+                            show: true,
+                            position: 'inside',
+                            fontSize:16
+                        }
+                    },
                     data: [21, 11, 20]
                 },
                 {
                     name: "已立项",
                     type: "bar",
                     stack: "广告",
+                    label: {
+                        normal: {
+                            show: true,
+                            position: 'inside',
+                            fontSize:16
+                        }
+                    },
                     data: [20, 20, 10]
                 },
                 {
                     name: "未提出需求",
                     type: "bar",
                     stack: "广告",
+                    label: {
+                        normal: {
+                            show: true,
+                            position: 'inside',
+                            fontSize:16
+                        }
+                    },
                     data: [5, 5, 10]
                 },
             ]

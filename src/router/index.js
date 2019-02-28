@@ -59,7 +59,7 @@ const router = new Router({
             name: 'chart1',
             components: {
                 Cont: resolve => {
-                    require(["../pages/overView/myChart/chart3"], resolve)
+                    require(["../pages/overView/myChart/chartAndLine"], resolve)
                 },
                 Aside: resolve => {
                     require(["../layout/sider/sider_2"], resolve)
@@ -72,7 +72,7 @@ const router = new Router({
             name: 'chart1',
             components: {
                 Cont: resolve => {
-                    require(["../pages/overView/myChart/chart4"], resolve)
+                    require(["../pages/overView/myChart/chartAndLine"], resolve)
                 },
                 Aside: resolve => {
                     require(["../layout/sider/sider_2"], resolve)
@@ -111,7 +111,7 @@ const router = new Router({
             name: 'chart1',
             components: {
                 Cont: resolve => {
-                    require(["../pages/overView/myChart/chart7"], resolve)
+                    require(["../pages/overView/myChart/chartAndPie"], resolve)
                 },
                 Aside: resolve => {
                     require(["../layout/sider/sider_2"], resolve)
@@ -124,7 +124,7 @@ const router = new Router({
             name: 'chart1',
             components: {
                 Cont: resolve => {
-                    require(["../pages/overView/myChart/chart8"], resolve)
+                    require(["../pages/overView/myChart/chartAndLine"], resolve)
                 },
                 Aside: resolve => {
                     require(["../layout/sider/sider_2"], resolve)
@@ -137,7 +137,7 @@ const router = new Router({
             name: 'chart1',
             components: {
                 Cont: resolve => {
-                    require(["../pages/overView/myChart/chart9"], resolve)
+                    require(["../pages/overView/myChart/chartAndPie"], resolve)
                 },
                 Aside: resolve => {
                     require(["../layout/sider/sider_2"], resolve)

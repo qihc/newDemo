@@ -3,12 +3,13 @@
      <div class="closeIcon"><Icon type="close-circled" @click="closeTable"></Icon></div>
      <Table :columns="columns1" :data="data1"></Table>
 </div>
-   
+
 </template>
 <script>
 export default {
     data() {
         return {
+            // isShowTable:true,
             // 战略分类    
             // 业务分类    
             // 部门名称    
@@ -124,6 +125,7 @@ export default {
             ]
         };
     },
+    
     mounted() {
        
     },
@@ -131,6 +133,7 @@ export default {
       closeTable(){
         this.$emit('closeTable', false)
       }
+
     }
 };
 </script>

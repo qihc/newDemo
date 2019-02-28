@@ -1,5 +1,9 @@
 <template>
-    <Table :columns="columns1" :data="data1"></Table>
+<div>
+     <div class="closeIcon"><Icon type="close-circled" @click="closeTable"></Icon></div>
+     <Table :columns="columns1" :data="data1"></Table>
+</div>
+   
 </template>
 <script>
 export default {
@@ -124,7 +128,12 @@ export default {
        
     },
     methods: {
-      
+      closeTable(){
+        this.$emit('closeTable', false)
+      }
     }
 };
 </script>
+<style>
+    .closeIcon{text-align: right; font-size:20px; cursor:pointer;}
+</style>

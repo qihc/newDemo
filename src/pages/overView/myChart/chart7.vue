@@ -133,7 +133,8 @@ export default {
                 // this.maskTableOnoff=true;
                 this.$emit('childByValue', this.maskTableOnoff)
             });
-        }
+        },
+        
     }
 };
 </script>

@@ -2,7 +2,7 @@
   <div>
       <selectMenu></selectMenu>
       <div id="myChart" :style="{width: '100%', height: '400px'}" ref="myChart"></div>
-       <maskTable v-if="maskTableOnoff"></maskTable>
+       <maskTable v-if="maskTableOnoff" v-on:closeTable="closeTable1"></maskTable>
   </div>
   
 </template>
@@ -123,7 +123,10 @@ export default {
                 // alert(1111)
                 this.maskTableOnoff=true;
             });
-        }
+        },
+        closeTable1(childValue){
+          this.maskTableOnoff = childValue
+        },
     }
 };
 </script>

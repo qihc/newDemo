@@ -8,7 +8,7 @@
         <chart9 v-on:childByValue="childByValue"></chart9>
       </Col>
     </Row>
-    <maskTable v-if="maskTableOnoff"></maskTable>
+    <maskTable v-if="maskTableOnoff" v-on:closeTable="closeTable1"></maskTable>
   </div>
   
 </template>
@@ -26,11 +26,14 @@ export default {
        
     },
     methods: {
-        childByValue(childValue) {
+      childByValue(childValue) {
         // alert(childValue)
         // childValue就是子组件传过来的值
         this.maskTableOnoff = childValue
-      }
+      },
+      closeTable1(childValue){
+          this.maskTableOnoff = childValue
+      },
     },
     components: {
        chart7,chart9

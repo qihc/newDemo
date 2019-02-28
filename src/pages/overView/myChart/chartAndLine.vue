@@ -2,7 +2,7 @@
   <div>
     <selectMenu></selectMenu>
     <chart8 v-on:childByValue="childByValue"></chart8>
-    <maskTable v-if="maskTableOnoff1"></maskTable>
+    <maskTable v-if="maskTableOnoff1" v-on:closeTable="closeTable1"></maskTable>
     <Row>
       <Col span="12">
         <chart3 v-on:childByValue="childByValue3"></chart3>
@@ -11,7 +11,7 @@
         <chart4 v-on:childByValue="childByValue3"></chart4>
       </Col>
     </Row>
-    <maskTable v-if="maskTableOnoff2"></maskTable>
+    <maskTable v-if="maskTableOnoff2" v-on:closeTable="closeTable2"></maskTable>
   </div>
   
 </template>
@@ -41,6 +41,12 @@ export default {
             // childValue就是子组件传过来的值
             this.maskTableOnoff1 = childValue
         },
+        closeTable1(childValue){
+            this.maskTableOnoff1 = childValue
+        },
+        closeTable2(childValue){
+            this.maskTableOnoff2 = childValue
+        }
     },
     components: {
        chart3,chart4,chart8

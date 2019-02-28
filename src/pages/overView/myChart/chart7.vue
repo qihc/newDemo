@@ -1,8 +1,13 @@
 <template>
   <div>
+      <!-- <selectMenu></selectMenu> -->
       <div id="myChart" :style="{width: '100%', height: '400px'}" ref="myChart"></div>
+<<<<<<< HEAD
       <button @click="handleClick" v-if="maskTableOnoff">X</button>
        <maskTable v-if="maskTableOnoff"></maskTable>
+=======
+       <!-- <maskTable v-if="maskTableOnoff"></maskTable> -->
+>>>>>>> 3cc6ac58ba3f6f3703808ef36811ff9b7edf6234
   </div>
   
 </template>
@@ -11,31 +16,59 @@ export default {
     name: "hello",
     data() {
         return {
-            maskTableOnoff:false,
+            maskTableOnoff:true,
             msg: "分块柱状图",
             bardata: [
                 {
                     name: "需求计划推进立项情况",
                     type: "bar",
                     stack: "广告",
+                    label: {
+                        normal: {
+                            show: true,
+                            position: 'inside',
+                            fontSize:16
+                        }
+                    },
                     data: [30, 20, 20]
                 },
                 {
                     name: "推进中",
                     type: "bar",
                     stack: "广告",
+                    label: {
+                        normal: {
+                            show: true,
+                            position: 'inside',
+                            fontSize:16
+                        }
+                    },
                     data: [20, 20, 10]
                 },
                 {
                     name: "未开始",
                     type: "bar",
                     stack: "广告",
+                    label: {
+                        normal: {
+                            show: true,
+                            position: 'inside',
+                            fontSize:16
+                        }
+                    },
                     data: [10, 20, 6]
                 },
                 {
                     name: "需求计划推进立项情况",
                     type: "bar",
                     stack: "广告",
+                    label: {
+                        normal: {
+                            show: true,
+                            position: 'inside',
+                            fontSize:16
+                        }
+                    },
                     data: [30, 20, 20]
                 },
             ]
@@ -65,7 +98,7 @@ export default {
                     top: "10px"
                 },
                 tooltip: {
-                    trigger: "axis"
+                    
                 },
                 label: {
                     show: false
@@ -105,7 +138,8 @@ export default {
             myChart.setOption(option);
             myChart.on('click', ()=>{
                 // alert(1111)
-                this.maskTableOnoff=true;
+                // this.maskTableOnoff=true;
+                this.$emit('childByValue', this.maskTableOnoff)
             });
         }
     }

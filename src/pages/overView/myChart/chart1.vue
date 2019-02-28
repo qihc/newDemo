@@ -1,5 +1,6 @@
 <template>
   <div>
+      <selectMenu></selectMenu>
       <div id="myChart" :style="{width: '100%', height: '400px'}" ref="myChart"></div>
       <button @click="handleClick" v-if="maskTableOnoff">X</button>
        <maskTable v-if="maskTableOnoff"></maskTable>
@@ -18,24 +19,52 @@ export default {
                     name: "需求计划推进立项情况",
                     type: "bar",
                     stack: "广告",
+                    label: {
+                        normal: {
+                            show: true,
+                            position: 'inside',
+                            fontSize:16
+                        }
+                    },
                     data: [30, 20, 20]
                 },
                 {
                     name: "推进中",
                     type: "bar",
                     stack: "广告",
+                    label: {
+                        normal: {
+                            show: true,
+                            position: 'inside',
+                            fontSize:16
+                        }
+                    },
                     data: [20, 20, 10]
                 },
                 {
                     name: "未开始",
                     type: "bar",
                     stack: "广告",
+                    label: {
+                        normal: {
+                            show: true,
+                            position: 'inside',
+                            fontSize:16
+                        }
+                    },
                     data: [10, 20, 6]
                 },
                 {
                     name: "需求计划推进立项情况",
                     type: "bar",
                     stack: "广告",
+                    label: {
+                        normal: {
+                            show: true,
+                            position: 'inside',
+                            fontSize:16
+                        }
+                    },
                     data: [30, 20, 20]
                 },
             ]

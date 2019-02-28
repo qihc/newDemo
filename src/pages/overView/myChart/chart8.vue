@@ -1,8 +1,8 @@
 <template>
   <div>
+      <!-- <selectMenu></selectMenu> -->
       <div id="myChart" :style="{width: '100%', height: '400px'}" ref="myChart"></div>
-      <button @click="handleClick" v-if="maskTableOnoff">X</button>
-       <maskTable v-if="maskTableOnoff"></maskTable>
+      <!-- <maskTable v-if="maskTableOnoff"></maskTable> -->
   </div>
   
 </template>
@@ -11,20 +11,34 @@ export default {
     name: "hello",
     data() {
         return {
-            maskTableOnoff:false,
+            maskTableOnoff:true,
             msg: "分块柱状图",
             bardata: [
                 {
                     name:'延迟',
                     type:'bar',
-                    barWidth : 30,
+                    
                     stack: '广告',
-                    data:[20, 30, 20, 40, 0]
+                    label: {
+                        normal: {
+                            show: true,
+                            position: 'inside',
+                            fontSize:16
+                        }
+                    },
+                    data:[20, 30, 20, 40, 10]
                 },
                 {
                     name:'正常',
                     type:'bar',
                     stack: '广告',
+                    label: {
+                        normal: {
+                            show: true,
+                            position: 'inside',
+                            fontSize:16
+                        }
+                    },
                     data:[50, 20, 60, 30, 30]
                 }
             ]
@@ -54,7 +68,10 @@ export default {
                     top: "10px"
                 },
                 tooltip: {
-                    trigger: "axis"
+                    trigger: 'axis',
+                    axisPointer: {            // 坐标轴指示器，坐标轴触发有效
+                        type: 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
+                    }
                 },
                 label: {
                     show: false
@@ -85,7 +102,8 @@ export default {
             myChart.setOption(option);
             myChart.on('click', ()=>{
                 // alert(1111)
-                this.maskTableOnoff=true;
+                // this.maskTableOnoff=true;
+                this.$emit('childByValue', this.maskTableOnoff)
             });
         }
     }

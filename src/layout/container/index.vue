@@ -19,7 +19,7 @@ export default {
 	},
 }
 </script>
-<style lang="less" scoped>
+<style  scoped>
 .container {
    padding: 0 16px 16px;
    background: #fff;
@@ -30,5 +30,6 @@ export default {
 	position:relative;
 
 }
+.ContView{}
 
 </style>

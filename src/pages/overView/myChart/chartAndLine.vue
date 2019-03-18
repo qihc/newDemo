@@ -1,14 +1,17 @@
 <template>
   <div>
     <selectMenu></selectMenu>
-    <chart8 v-on:childByValue="childByValue"></chart8>
-    <maskTable v-if="maskTableOnoff1" v-on:closeTable="closeTable1"></maskTable>
-    <Row>
+    <div class="wrap">
+      <chart8 v-on:childByValue="childByValue"></chart8>
+      <maskTable v-if="maskTableOnoff1" v-on:closeTable="closeTable1"></maskTable>
+    </div>
+    
+    <Row style="margin-top:40px" :gutter="16">
       <Col span="12">
-        <chart3 v-on:childByValue="childByValue3"></chart3>
+        <chart3 v-on:childByValue="childByValue3" class="wrap"></chart3>
       </Col>
       <Col span="12">
-        <chart4 v-on:childByValue="childByValue3"></chart4>
+        <chart4 v-on:childByValue="childByValue3" class="wrap"></chart4>
       </Col>
     </Row>
     <maskTable v-if="maskTableOnoff2" v-on:closeTable="closeTable2"></maskTable>
@@ -53,3 +56,7 @@ export default {
     }
 };
 </script>
+
+<style>
+  .wrap{padding: 4px; border: 1px solid #d8d8d8;}
+</style>

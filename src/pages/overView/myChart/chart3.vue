@@ -104,3 +104,7 @@ export default {
     }
 };
 </script>
+
+<style>
+    /*#myChart{padding: 10px; border: 1px solid #d8d8d8;}*/
+</style>

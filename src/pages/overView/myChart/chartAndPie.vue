@@ -1,11 +1,11 @@
 <template>
-  <div>
-   <Row >
+  <div style="margin-top:20px">
+   <Row :gutter="16">
       <Col span="12">
-        <chart7 v-on:childByValue="childByValue"></chart7>
+        <chart7 v-on:childByValue="childByValue" class="wrap"></chart7>
       </Col>
       <Col span="12">
-        <chart9 v-on:childByValue="childByValue"></chart9>
+        <chart9 v-on:childByValue="childByValue" class="wrap"></chart9>
       </Col>
     </Row>
     <maskTable v-if="maskTableOnoff" v-on:closeTable="closeTable1"></maskTable>
@@ -40,3 +40,6 @@ export default {
     }
 };
 </script>
+<style>
+  .wrap{padding: 4px; border: 1px solid #d8d8d8;}
+</style>
